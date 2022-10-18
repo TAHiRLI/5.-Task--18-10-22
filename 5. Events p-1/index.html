@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .big{
+            width: 60%;
+            margin: 0 20%;
+        }
+        .big img{
+            height: 400px;
+            width: 100%;
+        }
+        .all{
+            width: 80%;
+            margin: 5% 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: stretch;
+            row-gap: 10px;
+        }
+        .item{
+            width: 25%;
+        }
+        .item img{
+            width: 100%;
+            height: 250px;
+        }
+        .list-group-item.done{
+            border: 5px solid green;
+        }
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body >
+
+    
+    <div class="container my-4">
+        <div class="card container">
+            <div class="card-title">
+                <p class="h2">Todo List</p>
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Type what you want to do">
+                    <input type="datetime-local" class="form-control">
+                    <button class="input-group-text" id="todo">Add</button>
+                </div>
+                <ul id="list" class="list-group">
+                    <li class="list-group-item my-2">
+                        <div class="row align-items-center">
+                            <p class="col-md-4 m-0">Task 1</p>
+                            <p class="col-md-4 m-0">2022-10-18 | 16:45</p>
+                            <div class="col-md-4 row justify-content-between">
+                                <button onclick="this.parentElement.parentElement.parentElement.classList.toggle('done');" class="btn btn-success btn-done col-md-5">Done</button>
+                                <button onclick="this.parentElement.parentElement.parentElement.remove()" class="btn btn-danger col-md-5">Delete</button>
+                            </div>
+                        </div>
+                    </li>
+                  
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // let main = document.getElementById('mainImg');
+        // let imgs = document.getElementsByClassName("item-img");
+        // //let imgs = document.querySelectorAll(".item img"); sonradan elave olunan itemlar ishlemir
+        // document.querySelector(".all").innerHTML += '<div class="item"><img class="item-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73SvMBUuNVooPgtf_v1EbpOfMNxsMZO78rXkTg5_D07OxOGNlKtC5xlKN_3TwhvmeRYw&usqp=CAU" /></div>';
+        // for (const img of imgs) {
+        //     img.addEventListener("click",function () {
+        //         main.src = img.src;
+        //     })
+        // }
+        // let btn = document.getElementById('btn');
+        // // btn.onclick = function(){
+        // //     this.style.backgroundColor = 'red';
+        // // }
+        // // btn.onclick = function(){
+        // //     console.log('Salam');
+        // // }
+        // // btn.addEventListener('click',function(){
+        // //     document.body.style.backgroundColor = '#' + Math.floor(Math.random()*100) +Math.floor(Math.random()*100)+Math.floor(Math.random()*100)
+        // // })
+        // let aTag = document.querySelector("a");
+        // aTag.addEventListener('click',e=>{
+        //     e.preventDefault();
+        // })
+        // btn.addEventListener('click', e=>{
+        //     // const elem = e.target;
+        //     // elem.style.backgroundColor = "red";
+        //     // elem.style.color = "black"
+        //     clearInterval(int)
+        // })
+        // btn.addEventListener('contextmenu', e=>{
+        //     // const elem = e.target;
+        //     // elem.style.backgroundColor = "red";
+        //     // elem.style.color = "black"
+        //     int = setInterval(()=>{
+        //         second++;
+        //         aTag.innerText = second;
+        //     },1000)
+        // })
+        // let second = 0;
+        // let int = setInterval(()=>{
+        //     second++;
+        //     aTag.innerText = second;
+        // },5)
+        
+        // setInterval(alert,1000)
+    </script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

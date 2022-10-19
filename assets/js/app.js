@@ -30,7 +30,7 @@ playBtn.addEventListener('click', () => {
         }
 
         console.log(minute, second);
-        h1.innerText = `${minute} ${second}`;
+        h1.innerText = `${minute} : ${second}`;
 
     }, 1000);
 });
